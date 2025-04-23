@@ -1,62 +1,38 @@
+  <h2>Attributes</h2>
+  <ul>
+    <li><strong>Wounds:</strong> {{data.attributes.wounds.value}} / {{data.attributes.wounds.max}}</li>
+    <li><strong>Toughness:</strong> {{data.attributes.toughness.value}} (Mod: {{data.attributes.toughness.mod}})</li>
+  </ul>
 
-<section class="sheet vehicle-sheet">
-  <header class="sheet-header">
-    <div class="sheet-img" style="background-image: url({{img}})"></div>
-    <h1 class="sheet-title">{{name}}</h1>
-  </header>
+  <h2>Resources</h2>
+  <ul>
+    <li><strong>Energy:</strong> {{data.resources.energy.value}}</li>
+  </ul>
 
-  <div class="sheet-body grid grid-cols-2 gap-4 p-4">
-    <!-- Left Column: Core Stats -->
-    <div class="sheet-section">
-      <h2>Details</h2>
-      <ul>
-        <li><strong>Class:</strong> {{data.details.class}}</li>
-        <li><strong>Size:</strong> {{data.details.size}}</li>
-        <li><strong>Scale:</strong> {{data.details.scale}}</li>
-        <li><strong>Speed:</strong> {{data.details.speed}}</li>
-        <li><strong>Handling:</strong> {{data.details.handling}}</li>
-        <li><strong>Crew:</strong> {{data.details.crew}}</li>
-        <li><strong>Passengers:</strong> {{data.details.passengers}}</li>
-      </ul>
+  <h2>Finance</h2>
+  <ul>
+    <li><strong>Cost:</strong> {{data.finance.cost}}</li>
+  </ul>
+</div>
 
-      <h2>Attributes</h2>
-      <ul>
-        <li><strong>Wounds:</strong> {{data.attributes.wounds.value}} / {{data.attributes.wounds.max}}</li>
-        <li><strong>Toughness:</strong> {{data.attributes.toughness.value}} (Mod: {{data.attributes.toughness.mod}})</li>
-      </ul>
+<!-- Right Column: Description, Notes, Weapons -->
+<div class="sheet-section">
+  <h2>Description</h2>
+  <div class="description">{{{data.description.value}}}</div>
 
-      <h2>Resources</h2>
-      <ul>
-        <li><strong>Energy:</strong> {{data.resources.energy.value}}</li>
-      </ul>
+  {{#if data.notes}}
+  <h2>Notes</h2>
+  <div class="notes">{{{data.notes}}}</div>
+  {{/if}}
 
-      <h2>Finance</h2>
-      <ul>
-        <li><strong>Cost:</strong> {{data.finance.cost}}</li>
-      </ul>
-    </div>
-
-    <!-- Right Column: Description, Notes, Weapons -->
-    <div class="sheet-section">
-      <h2>Description</h2>
-      <div class="description">{{{data.description.value}}}</div>
-
-      {{#if data.notes}}
-      <h2>Notes</h2>
-      <div class="notes">{{{data.notes}}}</div>
+  <h2>Weapons</h2>
+  <ul>
+    {{#each items}}
+      {{#if (eq this.type "weapon")}}
+        <li>
+          <strong>{{this.name}}</strong>: {{{this.data.description.value}}}
+        </li>
       {{/if}}
-
-      <h2>Weapons</h2>
-      <ul>
-        {{#each items}}
-          {{#if (eq type "weapon")}}
-            <li>
-              <strong>{{name}}</strong>: {{{data.description.value}}}
-            </li>
-          {{/if}}
-        {{/each}}
-      </ul>
-    </div>
-  </div>
-</section>
->>>>>>> Stashed changes
+    {{/each}}
+  </ul>
+</div>
