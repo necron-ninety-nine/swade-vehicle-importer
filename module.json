@@ -24,18 +24,5 @@
   "manifest": "https://raw.githubusercontent.com/necron-ninety-nine/swade-vehicle-importer/main/module.json",
   "download": "https://github.com/necron-ninety-nine/swade-vehicle-importer/releases/download/v0.1.0/module.zip",
   "bugs": "https://github.com/necron-ninety-nine/swade-vehicle-importer/issues",
-  "readme": "https://github.com/necron-ninety-nine/swade-vehicle-importer#readme",
-  "languages": [
-    { "lang": "en", "name": "English", "path": "lang/en.json" }
-  ],
-  "packs": [
-    {
-      "name": "swade-vehicle-importer-macros",
-      "label": "Vehicle Importer Macros",
-      "system": "swade",
-      "path": "packs/macros-vehicle-importer.db",
-      "module": "swade-vehicle-importer",
-      "type": "Macro"
-    }
-  ]
+  "readme": "https://github.com/necron-ninety-nine/swade-vehicle-importer#readme"
 }
