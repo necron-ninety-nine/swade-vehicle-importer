@@ -2,7 +2,7 @@
   "id": "swade-vehicle-importer",
   "title": "SWADE Vehicle Stat Block Importer",
   "description": "Import SWADE vehicle statblocks into Vehicle actors",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "compatibility": {
     "minimum": 12,
     "verified": 12
@@ -22,7 +22,7 @@
   "scripts": [],
   "url": "https://github.com/necron-ninety-nine/swade-vehicle-importer",
   "manifest": "https://raw.githubusercontent.com/necron-ninety-nine/swade-vehicle-importer/main/module.json",
-  "download": "https://github.com/necron-ninety-nine/swade-vehicle-importer/releases/download/v0.1.0/module.zip",
+  "download": "https://github.com/necron-ninety-nine/swade-vehicle-importer/releases/download/v0.1.1/module.zip",
   "bugs": "https://github.com/necron-ninety-nine/swade-vehicle-importer/issues",
   "readme": "https://github.com/necron-ninety-nine/swade-vehicle-importer#readme"
 }
